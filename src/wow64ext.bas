@@ -1,4 +1,7 @@
 Attribute VB_Name = "wow64ext"
+'Indetectables.net
+'(c) Slek 2016
+
 Option Explicit
 
 'USER32
@@ -290,7 +293,7 @@ Private Function calltest(ByVal func As Long, ParamArray args()) As Long
     Call CallWindowProcW(VarPtr(ASM_CALLCODE(0)), VarPtr(func), argc, VarPtr(params(0)), VarPtr(calltest))
 End Function
 
-Private Function X64Call(ByVal func As Currency, ParamArray args()) As Currency
+Public Function X64Call(ByVal func As Currency, ParamArray args()) As Currency
     Dim sThunk                      As String
     Dim argc                        As Long
     Dim params()                    As Currency
